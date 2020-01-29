@@ -116,12 +116,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void httpTest(View view) {
-        final TextView textView = (TextView) findViewById(R.id.text);
+        final TextView textView = (TextView) findViewById(R.id.textView);
         // ...
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http://www.google.com";
+        String url ="https://www.google.com";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
