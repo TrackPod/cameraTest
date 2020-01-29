@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="https://www.google.com";
+        String url ="http://192.168.4.1/26/on";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -137,6 +137,70 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText("That didn't work!");
             }
         });
+
+        // Add the request to the RequestQueue.
+        queue.add(stringRequest);
+
+    }
+
+    public void moveLeft(View view) {
+        final TextView textView = (TextView) findViewById(R.id.textView);
+        // ...
+
+        // Instantiate the RequestQueue.
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url ="http://192.168.4.1/left";
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, null , null );
+
+        // Add the request to the RequestQueue.
+        queue.add(stringRequest);
+
+    }
+
+    public void moveRight(View view) {
+        final TextView textView = (TextView) findViewById(R.id.textView);
+        // ...
+
+        // Instantiate the RequestQueue.
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url ="http://192.168.4.1/right";
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, null, null);
+
+        // Add the request to the RequestQueue.
+        queue.add(stringRequest);
+
+    }
+
+    public void moveUp(View view) {
+        final TextView textView = (TextView) findViewById(R.id.textView);
+        // ...
+
+        // Instantiate the RequestQueue.
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url ="http://192.168.4.1/up";
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, null, null);
+
+        // Add the request to the RequestQueue.
+        queue.add(stringRequest);
+
+    }
+
+    public void moveDown(View view) {
+        final TextView textView = (TextView) findViewById(R.id.textView);
+        // ...
+
+        // Instantiate the RequestQueue.
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url ="http://192.168.4.1/down";
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, null, null);
 
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
